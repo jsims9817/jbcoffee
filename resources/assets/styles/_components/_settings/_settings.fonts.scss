@@ -1,0 +1,101 @@
+///*
+//    #FONTS
+//*/
+@function size($size, $item: 'base') {
+  @return map-get(map-get($sizes, $size), $item);
+}
+
+/* Font Sizes */
+$base-font-size: 16px;
+$base-line-height: $base-font-size;
+$sizes: (
+  headings: (
+    base: 22px,
+    heading-size-1: 30px,
+    heading-size-2: 24px,
+    heading-size-3: 22px,
+    heading-size-4: 20px,
+    heading-size-5: 18px,
+    heading-size-6: 16px,
+  ),
+  site: (
+    base:           16px,
+    double:         32px,
+    triple:         48px,
+    half:           8px,
+    brand:          24px,
+    normal:         12px,
+    smallest:       9px,
+  ),
+);
+$sanSerif: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+$serif: Georgia, Times, 'Times New Roman', serif;
+
+//reuseable font groups
+%sanSerif {
+  font-family: $sanSerif;
+  font-weight: normal;
+}
+
+%serif {
+  font-family: $serif;
+  font-weight: normal;
+}
+
+@font-face {
+    font-family: 'abhaya_librebold';
+    src: url('abhayalibre-bold-webfont.woff2') format('woff2'),
+         url('abhayalibre-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'nunito_sansbold';
+    src: url('nunitosans-bold-webfont.woff2') format('woff2'),
+         url('nunitosans-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'nunito_sansbold_italic';
+    src: url('nunitosans-bolditalic-webfont.woff2') format('woff2'),
+         url('nunitosans-bolditalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'nunito_sansitalic';
+    src: url('nunitosans-italic-webfont.woff2') format('woff2'),
+         url('nunitosans-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'nunito_sansregular';
+    src: url('nunitosans-regular-webfont.woff2') format('woff2'),
+         url('nunitosans-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+h1, h2, h3 {
+  font-family: 'abhaya_librebold';
+}
+
+h4, h5, h6 {
+  font-family: 'nunito_sansbold';
+  font-weight: bold;
+}
+
+p {
+  font-family: 'nunito_sansregular';
+}
